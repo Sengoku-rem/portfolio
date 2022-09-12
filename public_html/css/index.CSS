@@ -31,10 +31,12 @@ header {
   position: fixed;
   top: 20px;
   left: 20px;
+  
+  z-index: 9999;
 }
 
 body {
-  width: 1024px;
+  width: 900px;
   margin: 0 auto;
 }
 

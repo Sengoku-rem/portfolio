@@ -1,0 +1,21 @@
+仙石ポートフォリオ作成ロードマップ
+
+1.about.html：htmlとcss
+2.
+3.
+4.
+
+
+📁public_html
+┣━ 📜index.html
+┣━ 📁html
+┃	┣━ 📜works.html
+┃	┗━ 📜blog.html
+┃	┗━ 📜about.html
+┣━ 📁css
+┃	┗━ 📜index.css
+┣━ 📁js
+┃	┗━ 📜index.js
+┗━ 📁data
+	┣━ 📷icon_chan.jpg
+	┗━ 📷icon_chan.jpg
