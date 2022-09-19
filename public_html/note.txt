@@ -1,9 +1,17 @@
 仙石ポートフォリオ作成ロードマップ
 
 1.about.html：htmlとcss
-2.
-3.
-4.
+→保留
+2.blog.html：htmlとcss
+→レイアウトできた、デコレーションまだ
+3.index.html：トップ写真を右に寄せる
+→無理ぽ（？）
+4.index.html：トップの文言を縦書きにする
+→縦書きにした
+5.works.html：htmlとcss
+
+6.ロゴ作成
+7.index.html：htmlとcss
 
 
 📁public_html
@@ -19,3 +27,100 @@
 ┗━ 📁data
 	┣━ 📷icon_chan.jpg
 	┗━ 📷icon_chan.jpg
+
+
+    23の詳細と制約と誓約
+
+    情報表現演習
+    ・アルファベットフルーツ                     Scratch
+
+    入門プログラミング
+    ・最終課題「古き良き脱出ゲーム」               processing / java
+
+    Webプログラミング
+    （・ファイアーエムブレムif）                  Atom / html, css
+    ・飛騨高山 -旅行記-                         Atom / html, css
+
+    グラフィックデザイン
+    ・dish -皿-                               Blender
+    ・インフォグラフィックス                      Illustlator
+    ・recipe                                  Illustlator, Photoshop
+
+    オブジェクト指向技術
+    ・そらもよう                                VScode, docker / JavaScript(vue.js)
+
+    天文気象研究同好会
+    ・ホームページ                              wordPress
+
+    EDPS
+    ・重力操作ゲーム                             Unity, Blender
+
+    春課題
+    ・青砥町                                   VScode / JavaScript
+
+    基礎演習D
+    ・鈴蘭街                                   Illustlator
+    ・Dog Web                                 VScode / html, css, bootstrap
+    （打出の小槌）                   
+
+    情報デザイン
+    ・言い換えてMyo?                            Illustlator
+    ・関係性を図解（突くべし！打つべし！のやつ）      Illustlator
+    ・Unit and Scale                           Illustlator
+    ・ゴミの分別のためのピクトグラム                Illustlator
+    ・How to visit Japanese shrine             Illustlator
+
+    ユーザインタフェース
+    ・天ぷら                                   figma, PowerPoint
+
+    テーマ実習1
+    ・Rolling Ball with Dark                  Unity
+
+    ITスキル実習2
+    ・Macのスクリーン画面に応じて元気度が変わる犬   Shell, processing / java
+
+    ------------------------------------------------------------------------------
+
+  <div class="blogPhotoArea">
+    <img src="icon_chan.jpg" alt="写真">
+    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+
+  <div class="blogPhotoArea change">
+    <img src="icon_chan.jpg" alt="写真">
+    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+
+  .blogPhotoArea {
+  display: flex;
+  margin: 40px 10px;
+  text-align: center;
+}
+
+.blogPhotoArea > img {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.blogPhotoArea > p {
+  margin: 20px;
+  line-height: 40px;
+}
+
+.change {
+  flex-flow: row-reverse;
+}
+
+@media (max-width:899px) {
+  body{
+    width: 100%;
+  }
+
+  .blogPhotoArea {
+    display: block;
+  }
+
+  .blogPhotoArea > img {
+    width: 70%;
+    }
+}

@@ -43,16 +43,42 @@
 
         <div class="MenuPage">
             <ul>
-                <li><a href="../index.html">home</a></li>
-                <li><a href="works.html">works</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="blog.html">blog</a></li>
+                <li><a href="../index.html">HOME</a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="blog.html">BLOG</a></li>
             </ul>
         </div>
     </header>
 
+    <!-- 「Vue.jsは噛み付かない」 -->
+    <div id="worksPage">
+        <h1>Works</h1>
 
+        <!-- 絞り込みナビ -->
+        <ul>
+            <li>all</li>
+            <li>game</li>
+            <li>3Dmodel</li>
+            <li>website</li>
+            <li>infoDesign</li>
+            <li>graphicDesign</li>
+        </ul>
 
+        <!-- トップページ -->
+        <div class="container" v-on:click="showPage1">
+        </div>
+
+        <div class="container" v-on:click="showPage2">
+        </div>
+
+        <!-- showPage 1 ↑ 課題詳細ポップアップ -->
+        <div v-if="showPage == 1">
+        </div>
+        <div v-if="showPage == 2">
+        </div>
+
+    </div>
 
 </body>
 

@@ -31,13 +31,14 @@ header {
   position: fixed;
   top: 20px;
   left: 20px;
-  
+
   z-index: 9999;
 }
 
 body {
   width: 900px;
   margin: 0 auto;
+  background-color: rgb(255, 255, 255);
 }
 
 #invisibleCheck {
@@ -192,22 +193,22 @@ span:nth-of-type(6) {
   width: 30px;
 }
 
-
+/* index.html Top Image */
+#imgContainerBox{
+  display: flex;
+  justify-content: flex-end;
+}
 .firstScroll img {
   width: 768px;
   border-radius: 50%;
   right: 0;
-
-  /* box-shadow:  10px 10px 10px 10px rgba(0, 0, 0, 0.5); */
 }
-
 .image-box {
   position: relative;
   z-index: 1;
   width: 768px;
   height: 768px;
 }
-
 .image-box .shadow {
   -moz-box-shadow: inset 0px 0px 12px rgba(0, 0, 0, .8);
   -webkit-box-shadow: inset 0px 0px 12px rgba(0, 0, 0, .8);
@@ -215,13 +216,24 @@ span:nth-of-type(6) {
   border-radius: 50%;
 
 }
-
 .image-box .shadow img {
   position: relative;
   z-index: -1;
   border-radius: 50%;
 
 }
+/* index.html Top Text */
+#topText {
+  writing-mode: vertical-rl;
+  font-size: xx-large;
+  position: absolute;
+  text-indent: 1rem;
+  background-color: rgba(255,255,255,0.5);
+  padding: 8px;
+
+  z-index: 3;
+}
+
 
 /* ハンバーガ後の装飾 */
 .MenuPage {
@@ -241,4 +253,47 @@ span:nth-of-type(6) {
 .MenuPage li a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+}
+
+
+/* BLOG */
+.blogPhotoArea {
+  display: flex;
+  margin: 40px 10px;
+  text-align: center;
+}
+
+.blogPhotoArea>img {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.blogPhotoArea>.blogTextArea {
+  margin: 20px;
+  line-height: 40px;
+}
+
+.change {
+  flex-flow: row-reverse;
+}
+
+@media (max-width:899px) {
+  body {
+    width: 100%;
+  }
+
+  .blogPhotoArea {
+    display: block;
+  }
+
+  .blogPhotoArea>img {
+    width: 70%;
+  }
+}
+
+/* WORKS */
+.container {
+  border: solid blue 1px;
+  width: 300px;
+  height: 200px;
 }
