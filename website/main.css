@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.showBox{
+	display: flex;
+  height: calc(100vh - 60px); /* 画面のサイズの高さ-60px */
+	margin: 2%;
+	padding: 2%;
+
+	border: solid 1px #333;
+  box-shadow: 4px 4px 10px 0px #666;
+}
+.left{
+	width: 20%;
+  padding-left: 1%;
+}
+.right{
+	width: 80%;
+  padding-left: 2%;
+
+	border-left: solid 1px #333;
+
+  flex: 1;
+  overflow-y: auto; /* コンテンツが多いときにスクロール可能に */
+  position: relative;
+}
+
+
+/* JavaScript */
+.page {
+  display: none;
+  
+  height: 100%;
+  overflow-y: auto;
+}
+.page.active {
+  display: block;
+}
+
+
+
+.commandBox{
+  width: 200px;
+	padding: 1%;
+	padding-left: 5%;
+	text-align: left;
+	margin: 1%;
+
+	font-size: 12px;
+	color: #333;
+  font-weight: bold;
+  background: transparent;
+  border-left: 1px solid #333;
+  position: relative;
+  z-index: 1;
+  transition: .3s;
+}
+.commandBox::before{
+	content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #333;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform ease .3s;
+}
+.commandBox:hover {
+	color: #fff;
+}
+.commandBox:hover::before {
+	transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.searchWrapper {
+  width: 200px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+#searchBox {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  width: 100%;
+	padding-left: 7%;
+	margin: 1%;
+
+  font-size: 12px;
+  color: #333;
+  font-weight: bold;
+  background: transparent;
+  position: relative;
+
+  z-index: 1;
+  transition: color 0.3s;
+}
+.searchWrapper::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  top: 0;
+  left: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform ease 0.3s;
+  z-index: 0;
+}
+.searchWrapper:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.searchWrapper:hover #searchBox {
+  color: #fff;
+}
+
+
+.label-sub {
+  display: inline-block;
+  white-space: nowrap; /* 改行しない */
+}
+@media (max-width: 1155px) {
+  .commandBox,
+  .searchWrapper {
+    width: 150px;
+    font-size: 12px;
+  }
+  #searchBox{
+    font-size: 12px;
+  }
+  
+  .label-sub {
+    display: block;
+    margin-left: 1em;
+  }
+}
+@media (max-width: 870px) {
+  .commandBox,
+  .searchWrapper {
+    width: 130px;
+    font-size: 10px;
+  }
+  #searchBox{
+    font-size: 10px;
+  }
+  
+  .label-sub {
+    display: block;
+    margin-left: 1em;
+  }
+}
+@media (max-width: 768px) {
+  .commandBox,
+  .searchWrapper {
+    width: 120px;
+    font-size: 8px;
+  }
+  #searchBox{
+    font-size: 8px;
+  }
+  
+  .label-sub {
+    display: block;
+    margin-left: 1em;
+  }
+}
+@media (max-width: 690px) {
+  /* ハンバーガーメニューへ */
+}
