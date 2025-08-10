@@ -21,8 +21,8 @@ function showPage(pageId) {
     });
 }
 
-// pluslabページを表示
 document.addEventListener("DOMContentLoaded", () => {
+  // 検索BOXの処理
   const input = document.getElementById("searchBox");
   const pages = document.querySelectorAll(".page");
 
@@ -45,6 +45,35 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         console.log("うーん:", val);
       }
+    }
+  });
+
+  // モーダル処理
+  const modal = document.getElementById('modal');
+  const modalContent = document.getElementById('modal-content');
+  const closeBtn = document.getElementById('close');
+
+  document.querySelectorAll('.media-item').forEach(item => {
+    item.addEventListener('click', () => {
+      modal.style.display = 'block';
+
+      if (item.tagName.toLowerCase() === 'img') {
+        modalContent.innerHTML = `<img src="${item.src}" alt="${item.alt}">`;
+      } else {
+        return;
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modalContent.innerHTML = '';
+  });
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      modalContent.innerHTML = '';
     }
   });
 });
