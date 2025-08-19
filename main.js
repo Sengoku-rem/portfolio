@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const val = input.value.trim().toLowerCase();
 
-      //すべてのページからactiveクラスを外す
+      //すべてのページからactiveクラスを取る
       pages.forEach(page => page.classList.remove("active"));
 
-      if (val === "sengoku") {
+      if (val === "pluslab") {
         //特設ページのみをactiveにする
         const target = document.getElementById("showPageSengoku");
         if (target) {
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // モーダル処理
+  //モーダルの処理
   const modal = document.getElementById('modal');
   const modalContent = document.getElementById('modal-content');
   const closeBtn = document.getElementById('close');
